@@ -7,7 +7,12 @@ project_root/
 │   ├── strength_evaluator.py
 │   ├── ml_model.py
 │   ├── dataset/
-│   │   └── passwords.csv
+│   │   └── modelpkl
+│   │   └── pwlds_average.csv
+│   │   └── pwlds_strong.csv
+│   │   └── pwlds_very_strong.csv
+│   │   └── pwlds_very_weak.csv
+│   │   └── pwld_weak.csv
 │   └── requirements.txt
 ├── frontend/
 │   ├── public/

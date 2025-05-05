@@ -1,12 +1,18 @@
-import React from 'react';
+import React from "react";
 
-function Visualization({ score }) {
-    return (
-        <div className="visualization">
-            <p>Password Strength: {score}%</p>
-            <progress value={score} max="100" />
-        </div>
-    );
+export default function Visualization({ score }) {
+  const pct = Math.min(100, Math.max(0, Math.round(score * 100) / 100));
+
+  return (
+    <div className="visualization" style={{ marginBottom: 20 }}>
+      <p>
+        Password Strength: <strong>{pct}%</strong>
+      </p>
+      <progress
+        value={pct}
+        max="100"
+        style={{ width: "100%", maxWidth: 400 }}
+      />
+    </div>
+  );
 }
-
-export default Visualization;
